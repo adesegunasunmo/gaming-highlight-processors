@@ -98,7 +98,7 @@ src/
 # INSTRUCTIONS
 ## **Step 1: Clone The Repo**
 ```bash
-git clone https://github.com/adesegunasunmo/game-highlight-processors.git
+git clone https://github.com/adesegunasunmo/gaming-highlight-processors.git
 cd src
 ```
 ## **Step 2: Add API Key to AWS Secrets Manager**
