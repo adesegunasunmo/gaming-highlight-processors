@@ -1,6 +1,6 @@
 # NCAA Game Highlights
 
-# Highlight Processor
+# Highlight Processors
 This project utilizes RapidAPI to fetch NCAA game highlights within a Docker container and leverages AWS MediaConvert to process and convert the media files.
 
 # File Overview
