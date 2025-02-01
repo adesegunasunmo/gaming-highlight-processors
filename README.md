@@ -95,7 +95,7 @@ src/
     └── outputs.tf
 ```
 
-# START HERE - Local
+# INSTRUCTIONS
 ## **Step 1: Clone The Repo**
 ```bash
 git clone https://github.com/adesegunasunmo/game-highlight-processors.git
