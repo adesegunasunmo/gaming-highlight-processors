@@ -10,12 +10,12 @@ The ```config.py``` script carries out the following functions:
 - It imports essential environment variables and maps them to Python variables, assigning default values when necessary.
 - This method ensures flexible configuration management, allowing different settings for various environments (e.g., development, staging, production) without altering the source code.
 
-The fetch.py script performs the following actions:
+The ```fetch.py``` script performs the following actions:
 
 Establishes the date and league that will be used to find highlights. We are using NCAA in this example because it's included in the free version.
 This will fetch the highlights from the API and store them in an S3 bucket as a JSON file (basketball_highlight.json)
 
-process_one_video.py performs the following actions:
+```process_one_video.py``` performs the following actions:
 
 Connects to the S3 bucket and retrieves the JSON file.
 Extracts the first video URL from within the JSON file.
@@ -23,21 +23,21 @@ Downloads the video fiel from the internet into the memory using the requests li
 Saves the video as a new file in the S3 bucket under a different folder (videos/)
 Logs the status of each step
 
-mediaconvert_process.py performs the following actions:
+```mediaconvert_process.py``` performs the following actions:
 
 Creates and submits a MediaConvert job
 Uses MediaConvert to process a video file - configures the video codec, resolution and bitrate. Also configured the audio settings
 Stores the processed video back into an S3 bucket
 
-run_all.py performs the following actions:
+```run_all.py``` performs the following actions:
 Runs the scripts in a chronological order and provides buffer time for the tasks to be created.
 
-.env file stores all over the environment variables, these are variables that we don't want to hardcode into our script.
+```.env``` file stores all over the environment variables, these are variables that we don't want to hardcode into our script.
 
-Dockerfile performs the following actions:
+```Dockerfile``` performs the following actions:
 Provides the step by step approach to build the image.
 
-Terraform Scripts:
+```Terraform Scripts:```
 These scripts are used to created resources in AWS in a scalable and repeatable way. All of the resources we work with like  S3, creating IAM user roles, elastic registry service and elastic container services is built here.
 
 # Prerequisites
